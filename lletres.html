@@ -7,6 +7,9 @@
     <script>
 
         // Exercici 1
+        
+        console.log(Math.round(3.5));
+        
         let nom= prompt("Escriu el teu nom:")
         nom=nom.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
         console.log(nom);
@@ -32,15 +35,26 @@
         }
        
     //   Exercici 3
-        
-        let contarLetras = {};
-        let letra;
    
-        nom.map(function(letra) { 
-        contarLetras[letra] = (contarLetras[letra] || 0)+1; 
+       contador=[];
+       
+       nom.map(lletra => {
+        if (contador[lletra] === undefined) {
+            contador[lletra] = 1;
+            } 
+        else {
+            contador[lletra] += 1;
+            }
+        });
+        console.log(contador);   
+    //     let contarLetras = {};
+    //     let letra;
+   
+    //     nom.map(function(letra) { 
+    //     contarLetras[letra] = (contarLetras[letra] || 0)+1; 
         
-         });
-       console.log(contarLetras);
+    //      });
+    //    console.log(contarLetras);
 
     //    exercici 4
 
