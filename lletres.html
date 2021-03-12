@@ -8,7 +8,7 @@
 
         // Exercici 1
         
-        console.log(Math.round(3.5));
+        
         
         let nom= prompt("Escriu el teu nom:")
         nom=nom.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
@@ -38,6 +38,7 @@
    
        contador=[];
        
+       
        nom.map(lletra => {
         if (contador[lletra] === undefined) {
             contador[lletra] = 1;
@@ -63,7 +64,8 @@
         let espai=(" ").split("");
         nomComplert=nom2.concat(espai,cognom);
         console.log(nomComplert);
-
+        nomComplert2=[...nom2,...espai,...cognom];
+        console.log(nomComplert2);
 
     
     </script>
